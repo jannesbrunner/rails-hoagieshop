@@ -1,3 +1,3 @@
 class Ingredient < ApplicationRecord
-  has_and_belongs_to_many :hoagies
+  has_many :hoagies, through: :hoagie_ingredients  
 end
