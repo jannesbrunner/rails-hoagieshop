@@ -40,5 +40,17 @@ hot_pepper = Ingredient.create(name: "Hot Pepper", price: "0.39")
 onion = Ingredient.create(name: "Onion", price: "0.10")
 
 ## Hoagies
-kill = Hoagie.create(name: "Kill The Kreepy Kow")
-kill.ingredients << sesame
+kill_kow = Hoagie.create(name: "Kill The Kreepy Kow")
+kill_kow.ingredients << sesame, cow, blood, hot_pepper
+
+poke_pig = Hoagie.create(name: "Poke The Preaching Pig")
+poke_pig.ingredients << multigrain, pig, blood, hot_pepper, salad, onion, tomato
+
+choke_chicken = Hoagie.create(name: "Chicken Choker")
+choke_chicken.ingredients << italian, blood, chicken, cucumber, onion, salad
+
+torture_turkey = Hoagie.create(name: "Torture The Turkey")
+torture_turkey.ingredients << honey_oat, turkey, turkey, blood, blood, salad
+
+wooden_h = Hoagie.create(name: "Holz Hoagie")
+wooden_h.ingredients << multigrain, tofu, salad, cucumber, pickles, onion, sweet_onion
