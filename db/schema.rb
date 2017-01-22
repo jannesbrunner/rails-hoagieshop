@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170122130414) do
+ActiveRecord::Schema.define(version: 20170122130950) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "hoagie_ingredients", force: :cascade do |t|
+    t.integer "hoagie_id",     null: false
+    t.integer "ingredient_id", null: false
+    t.index ["hoagie_id"], name: "index_hoagie_ingredients_on_hoagie_id", using: :btree
+    t.index ["ingredient_id"], name: "index_hoagie_ingredients_on_ingredient_id", using: :btree
+  end
 
   create_table "hoagies", force: :cascade do |t|
     t.string   "name",       null: false
@@ -33,4 +40,6 @@ ActiveRecord::Schema.define(version: 20170122130414) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "hoagie_ingredients", "hoagies"
+  add_foreign_key "hoagie_ingredients", "ingredients"
 end
