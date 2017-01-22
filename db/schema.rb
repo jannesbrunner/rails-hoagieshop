@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20170122150459) do
   create_table "ingredients", force: :cascade do |t|
     t.string   "name",                 null: false
     t.money    "price",      scale: 2, null: false
+    t.string   "cat",                  null: false
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
