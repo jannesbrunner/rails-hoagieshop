@@ -2,7 +2,7 @@ require 'test_helper'
 
 class HoagiesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @hoagy = hoagies(:one)
+    @hoagie = hoagies(:one)
   end
 
   test "should get index" do
@@ -11,36 +11,36 @@ class HoagiesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_hoagy_url
+    get new_hoagie_url
     assert_response :success
   end
 
-  test "should create hoagy" do
+  test "should create hoagie" do
     assert_difference('Hoagie.count') do
-      post hoagies_url, params: { hoagy: { name: @hoagy.name } }
+      post hoagies_url, params: { hoagie: { name: @hoagie.name } }
     end
 
-    assert_redirected_to hoagy_url(Hoagie.last)
+    assert_redirected_to hoagie_url(Hoagie.last)
   end
 
-  test "should show hoagy" do
-    get hoagy_url(@hoagy)
+  test "should show hoagie" do
+    get hoagie_url(@hoagie)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_hoagy_url(@hoagy)
+    get edit_hoagie_url(@hoagie)
     assert_response :success
   end
 
-  test "should update hoagy" do
-    patch hoagy_url(@hoagy), params: { hoagy: { name: @hoagy.name } }
-    assert_redirected_to hoagy_url(@hoagy)
+  test "should update hoagie" do
+    patch hoagie_url(@hoagie), params: { hoagie: { name: @hoagie.name } }
+    assert_redirected_to hoagie_url(@hoagie)
   end
 
-  test "should destroy hoagy" do
+  test "should destroy hoagie" do
     assert_difference('Hoagie.count', -1) do
-      delete hoagy_url(@hoagy)
+      delete hoagie_url(@hoagie)
     end
 
     assert_redirected_to hoagies_url

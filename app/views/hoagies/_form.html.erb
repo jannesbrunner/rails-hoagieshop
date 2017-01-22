@@ -1,10 +1,10 @@
-<%= form_for(hoagy) do |f| %>
-  <% if hoagy.errors.any? %>
+<%= form_for(hoagie) do |f| %>
+  <% if hoagie.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(hoagy.errors.count, "error") %> prohibited this hoagy from being saved:</h2>
+      <h2><%= pluralize(hoagie.errors.count, "error") %> prohibited this hoagie from being saved:</h2>
 
       <ul>
-      <% hoagy.errors.full_messages.each do |message| %>
+      <% hoagie.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

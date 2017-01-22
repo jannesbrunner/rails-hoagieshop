@@ -11,12 +11,12 @@
   </thead>
 
   <tbody>
-    <% @hoagies.each do |hoagy| %>
+    <% @hoagies.each do |hoagie| %>
       <tr>
-        <td><%= hoagy.name %></td>
-        <td><%= link_to 'Show', hoagy %></td>
-        <td><%= link_to 'Edit', edit_hoagy_path(hoagy) %></td>
-        <td><%= link_to 'Destroy', hoagy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= hoagie.name %></td>
+        <td><%= link_to 'Show', hoagie %></td>
+        <td><%= link_to 'Edit', edit_hoagie_path(hoagie) %></td>
+        <td><%= link_to 'Destroy', hoagie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Hoagy', new_hoagy_path %>
+<%= link_to 'New Hoagy', new_hoagie_path %>

@@ -1,1 +1,1 @@
-json.array! @hoagies, partial: 'hoagies/hoagy', as: :hoagy
+json.array! @hoagies, partial: 'hoagies/hoagie', as: :hoagie
