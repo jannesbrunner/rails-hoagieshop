@@ -1,3 +1,4 @@
 class Hoagie < ApplicationRecord
-  has_and_belongs_to_many :ingredients
+  has_many :ingredients, through: :hoagie_ingredients
+  has_many :hoagie_ingredients
 end

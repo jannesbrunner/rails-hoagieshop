@@ -40,4 +40,5 @@ hot_pepper = Ingredient.create(name: "Hot Pepper", price: "0.39")
 onion = Ingredient.create(name: "Onion", price: "0.10")
 
 ## Hoagies
-Hoagie.create(name: "Kill", ingredients: [sesame, mayo])
+kill = Hoagie.create(name: "Kill The Kreepy Kow")
+kill.ingredients << sesame
