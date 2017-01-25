@@ -1,44 +1,10 @@
 <h1>New Order</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td><h2>Bread</h2></td>
-    </tr>
-    <% @ingredients.where(cat: "bread").each do |bread| %>
-      <tr>
-        <td>
-          <%= radio_button_tag(:bread, bread.name) %>
-        </td>
-        <td>
-          <%= label_tag(:bread, bread.name) %>
-        </td>
-      </tr>
-    <% end %>
-    <tr>
-      <td><h2>Main</h2></td>
-    </tr>
-    <% @ingredients.where(cat: "main").each do |main| %>
-      <tr>
-        <td><%= main.name %></td>
-      </tr>
-    <% end %><tr>
-      <td><h2>Side</h2></td>
-    </tr>
-    <% @ingredients.where(cat: "side").each do |side| %>
-      <tr>
-        <td><%= side.name %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+</br>
+<h2>Bread</h2>
+<% @ingredients.where(cat: "bread").each do |bread| %>
+  <%= radio_button_tag(:bread, bread.name) %>
+  <%= label_tag(:bread, bread.name) %>
+<% end %>
 
 <%= render 'form', order: @order %>
 
