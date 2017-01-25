@@ -44,12 +44,15 @@ ActiveRecord::Schema.define(version: 20170122150459) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.integer  "hoagie_id",  null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["hoagie_id"], name: "index_orders_on_hoagie_id", using: :btree
   end
 
   add_foreign_key "extra_ingredients", "ingredients"
   add_foreign_key "extra_ingredients", "orders"
   add_foreign_key "hoagie_ingredients", "hoagies"
   add_foreign_key "hoagie_ingredients", "ingredients"
+  add_foreign_key "orders", "hoagies"
 end
