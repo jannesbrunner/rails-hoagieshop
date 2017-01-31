@@ -1,5 +1,57 @@
 <h1>New Order</h1>
 
+
+<table>
+  <tbody>
+    <tr><h2>Please choose your bread</h2></tr>
+    <% @ingredients.where(cat: "bread").each do |ingredient| %>
+      <tr>
+        <td><%= radio_button_tag(:bread_choice, ingredient.id) %></td>
+        <td><%= label_tag(:bread_name, ingredient.name) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr><h2>Please choose your sauce</h2></tr>
+      <% @ingredients.where(cat: "sauce").each do |ingredient| %>
+        <tr>
+          <td><%= radio_button_tag(:sauce_choice, ingredient.id) %></td>
+          <td><%= label_tag(:sauce_name, ingredient.name) %></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr><h2>Please choose your main</h2></tr>
+      <% @ingredients.where(cat: "main").each do |ingredient| %>
+        <tr>
+          <td><%= check_box_tag(:ingredient_choice) %></td>
+          <td><%= label_tag(:main_name, ingredient.name) %></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr><h2>Please choose your sides</h2></tr>
+      <% @ingredients.where(cat: "side").each do |ingredient| %>
+        <tr>
+          <td><%= check_box_tag(:ingredient_choice) %></td>
+          <td><%= label_tag(:main_name, ingredient.name) %></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>
+
+
+<p><%= params.inspect %><p/>
+
 <%= render 'form', order: @order %>
 
 <%= link_to 'Back', orders_path %>
