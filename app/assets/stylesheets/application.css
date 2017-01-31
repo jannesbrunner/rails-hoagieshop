@@ -13,3 +13,49 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+body {
+transform-origin: top left;
+transform:scale(1.5);
+width: 50%;
+text-align: center;
+text-shadow: 1px 1px 1px rgba(13,255,53,1);
+font-weight: normal;
+color: #FF1281;
+border: 1px solid #b5a759; 
+letter-spacing: 0pt;
+word-spacing:2pt;
+font-size:106%;
+text-align:left;
+font-family:comic sans, comic sans ms, cursive, verdana, arial, sans-serif;
+line-height:1;
+background:url(images/banner.png) repeat-x;
+border-radius: 16px 16px 134px 16px;
+-moz-border-radius: 16px 16px 134px 16px;
+-webkit-border-radius: 16px 16px 134px 16px;
+border: 17px outset #2bff00;
+}
+
+h1 {
+text-shadow:1px 1px 1px rgba(0,0,0,1);
+font-weight:bold;
+color:#4FD6FF;
+background-color:#FF3068;
+border: 5px ridge #b5a759;
+letter-spacing:1pt;
+word-spacing:2pt;
+font-size:164%;
+text-align:left;
+font-family:impact, sans-serif;
+line-height:1;
+margin:0px;
+padding:0px;
+
+}
+
+img {
+
+
+}
